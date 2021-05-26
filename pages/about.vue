@@ -10,8 +10,8 @@ export default {
   async asyncData({ $content, params, error }) {
     let post;
     try {
-      post = await $content(params.slug,"2021-05-22-hello" ).fetch();
-     //const post = await $content(`${params.slug}/articles`).fetch()
+     // post = await $content(params.slug,"2021-05-22-hello" ).fetch();
+       const post = await $content(`${params.slug}/about`).fetch();
     } catch (e) {
       error({ message: "Test" });
     }
